@@ -1,10 +1,9 @@
 import React from 'react';
-import { ImageSlider } from '../../components/imageSlides/ImageSlider';
+import { ImageSlider, slider } from '../../components/imageSlides/ImageSlider';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { Newsletter } from '../../components/Newsletter/Newsletter';
 import { MainContainer, BannerContainer, InputStyled, StyledSelect, ButtonStyled, StyledForm } from './styled';
-import { SliderData } from '../../components/imageSlides/SliderData';
 
 export const HomePage = () => {
     return(

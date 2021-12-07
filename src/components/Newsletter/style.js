@@ -8,7 +8,7 @@ export const NewsletterContainer=styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 6rem;
+  margin-bottom: rem;
 `
 
 export const MainText = styled.h1`
@@ -29,6 +29,7 @@ export const SendButton = styled.button`
   background-color: ${({theme}) => theme.primary};
   color: black;
   width: 7rem;
+  margin-bottom: 7rem;
   height: 2rem;
   border-color: transparent;
   border-radius: 5px;
