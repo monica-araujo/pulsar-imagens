@@ -1,0 +1,33 @@
+:local(.right_arrow) {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    font-size: 3rem;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+:local(.left_arrow) {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    font-size: 3rem;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+:local(.slide) {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+
+:local(.slide.active) {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}
