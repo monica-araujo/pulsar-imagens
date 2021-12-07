@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   padding: 0;
+}
+
+body {
+  background-color: RGB(238, 238, 238);
 }`
 
 const theme = {

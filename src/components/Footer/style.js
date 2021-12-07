@@ -72,3 +72,18 @@ export const SocialLogoContainer = styled.div`
         cursor: pointer;
 	}
 `
+
+export const PrivacityContainer = styled.div`
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    flex-direction: row;
+`
+
+export const PrivacityText = styled.p`
+    padding: 10px;
+    &:hover {
+        cursor: pointer;
+        
+    }
+`

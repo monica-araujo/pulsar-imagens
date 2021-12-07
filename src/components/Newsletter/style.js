@@ -1,29 +1,29 @@
 import styled from "styled-components";
 
 export const NewsletterContainer=styled.div`
-    width: 100%;
-    margin-top: 2rem;
-    height: 30%;
-    display: flex;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
 `
 
 export const MainText = styled.h1`
-    color: ${({theme}) => theme.primary};
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    
+  color: ${({theme}) => theme.primary};
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  
 `
 
 export const InputContainer = styled.div`
-    display: flex;
-    width: 80vw;
-    max-width: 450px;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-direction: column;
+  display: flex;
+  width: 80vw;
+  max-width: 450px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
 `
 
 export const SendButton = styled.button`

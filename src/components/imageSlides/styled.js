@@ -6,7 +6,6 @@ export const Container = styled.div`
     justify-content: center;
     padding: 5rem;
     flex-direction: column;
-    background-color: RGB(238, 238, 238);
 `
 export const Slider = styled.section `
     position: relative;
