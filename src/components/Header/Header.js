@@ -18,7 +18,13 @@ import {
 import cart from '../../assets/images/cart-icon.png'
 import menu from '../../assets/images/menu.svg'
 
+import {
+    useNavigate
+} from 'react-router-dom';
+
 export const Header = () => {
+
+    const navigate = useNavigate();
 
     const [show, setShow] = useState(false)
 
@@ -29,7 +35,7 @@ export const Header = () => {
     return (
         <Headers>
             <StyledHeader>
-                <LogoContainer onClick>
+                <LogoContainer onClick={navigate('/')}>
                     <Title>PULSAR</Title>
                     <YellowTitle>IMAGENS</YellowTitle>
                 </LogoContainer>
