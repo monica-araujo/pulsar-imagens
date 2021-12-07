@@ -8,7 +8,7 @@ import { media } from './assets/styles/media'
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0;
 }
 

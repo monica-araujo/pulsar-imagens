@@ -8,12 +8,11 @@ export const NewsletterContainer=styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 `
 
 export const MainText = styled.h1`
   color: ${({theme}) => theme.primary};
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   
 `
 

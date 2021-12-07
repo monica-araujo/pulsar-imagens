@@ -1,21 +1,23 @@
 import { HomePage } from "../pages/HomePage/HomePage";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import React from "react";
 import {LoginPage} from '../pages/LoginPage/LoginPage'
-import {SingUpPage} from '../pages/SingUpPage/SingUpPage'
+import {SignUpPage} from '../pages/SignUpPage/SignUpPage'
 
-export const R = () => {
+export const Router = () => {
     return (
-        <Router>
-            <Routes>
-                <Route exact path={'/'} element={<HomePage/>}/>
-            </Routes>
-            <Routes>
-                <Route exact path={'/login'} element={<LoginPage/>}/>
-            </Routes>
-            <Routes>
-                <Route exact path={'/registro'} element={<SingUpPage/>}/>
-            </Routes>
-        </Router>
+        <BrowserRouter>
+            <Switch>
+                <Route exact path={'/'}>
+                    <HomePage/>
+                </Route>
+                <Route exact path={'/login'}> 
+                    <LoginPage/>
+                </Route>
+                <Route exact path={'/registro'}>
+                    <SignUpPage/>
+                </Route>
+            </Switch>
+        </BrowserRouter>
     )
 }

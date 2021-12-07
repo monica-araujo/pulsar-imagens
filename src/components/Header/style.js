@@ -6,6 +6,7 @@ export const Headers = styled.header`
   display: flex;
   align-items: center;
   position: fixed;
+  z-index: 10;
 `
 export const StyledHeader = styled.div`
   font-family: Arial, Helvetica, sans-serif;

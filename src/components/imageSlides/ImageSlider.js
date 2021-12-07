@@ -1,39 +1,39 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { SliderData } from './SliderData'
-import {FaArrowCircleRight, FaArrowCircleLeft} from 'react-icons/fa'
-import { Slider, ImgStyled, Container } from './styled'
-import styles from './styled.css'
+import { ImgStyled, Container } from './styled'
+import Carousel, { slidesToShowPlugin,  arrowsPlugin } from '@brainhubeu/react-carousel'
+import '@brainhubeu/react-carousel/lib/style.css'
+import Icon from 'react-fa'
 
-export const ImageSlider = ({slides}) => {
+export const ImageSlider = () => {
 
-    const [current, setCurrent] = useState(0)
-    const lenght = slides.lenght
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? lenght - 1 : current - 1)
-    }
-    const nextSlide = () => {
-        setCurrent(current === lenght - 1 ? 0 : current + 1)
-    }
-
-    if(!Array.isArray(slides) || slides.lenght <= 0){
-        return null
-    }
 
     return (
         <Container>
-            <h1>Imagens adicionadas recentemente</h1>
-            <Slider>
-                <FaArrowCircleLeft className={styles.left_arrow} onClick={prevSlide} />
-                <FaArrowCircleRight className={styles.right_arrow} onClick={nextSlide} />
-                {SliderData.map((slide, index) => {
+            <h1>Adicionadas recentemente</h1>
+            <Carousel
+                plugins={[
+                'centered',
+                'infinite',
+                'arrows',
+                {
+                resolve: slidesToShowPlugin, arrowsPlugin,
+                options: {
+                numberOfSlides: 2,
+                arrowLeft: <button><Icon name="angle-double-left" /></button>,
+                arrowLeftDisabled:<button><Icon name="angle-left" /></button>,
+                },
+                },
+                ]}   
+
+            >
+                {SliderData.map(data => {
                     return (
-                        <div className={index === current ? 'slide active' : 'slide'} key={index}>
-                            {index === current && (<ImgStyled src={slide.image} />)}
-                        </div>
+                        <ImgStyled src={data.image} />
                     )
                 })}
-            </Slider>
+            </Carousel>
+
         </Container>
     )
 }

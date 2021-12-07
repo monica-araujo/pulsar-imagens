@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, ImageSlider } from '../../components/imageSlides/ImageSlider';
+import { ImageSlider } from '../../components/imageSlides/ImageSlider';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { Newsletter } from '../../components/Newsletter/Newsletter';
@@ -26,7 +26,7 @@ export const HomePage = () => {
                         </StyledForm>
                 </BannerContainer>
             </MainContainer>
-            <ImageSlider slides={SliderData}/>
+            <ImageSlider/>
             <Newsletter/>
             <Footer/>
         </div>

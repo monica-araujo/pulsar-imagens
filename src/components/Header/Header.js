@@ -17,14 +17,13 @@ import {
 } from './style'
 import cart from '../../assets/images/cart-icon.png'
 import menu from '../../assets/images/menu.svg'
-
-import {
-    useNavigate
-} from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
+import { goToLoginPage } from '../../routes/coordinator'
+import { goToSignUpPage } from '../../routes/coordinator'
 
 export const Header = () => {
 
-    const navigate = useNavigate();
+    const history = useHistory()
 
     const [show, setShow] = useState(false)
 
@@ -35,7 +34,7 @@ export const Header = () => {
     return (
         <Headers>
             <StyledHeader>
-                <LogoContainer onClick={navigate('/')}>
+                <LogoContainer>
                     <Title>PULSAR</Title>
                     <YellowTitle>IMAGENS</YellowTitle>
                 </LogoContainer>
@@ -64,10 +63,10 @@ export const Header = () => {
                         </SelectStyled>
                     </Li>
                     <Li>
-                        <ButtonLogin>ENTRAR</ButtonLogin>
+                        <ButtonLogin onClick={() => goToLoginPage(history)}>ENTRAR</ButtonLogin>
                     </Li>
                     <Li>
-                        <ButtonSignUp>CADASTRE-SE</ButtonSignUp>
+                        <ButtonSignUp onClick={() => goToSignUpPage(history)}>CADASTRE-SE</ButtonSignUp>
                     </Li>
                     <Li>
                         <CartIcon src={cart}/>

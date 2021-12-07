@@ -1,9 +1,10 @@
-import { R } from './routes/router'
+import { Header } from './components/Header/Header';
+import { Router } from './routes/router'
 
 function App() {
   return (
     <div className="App">
-      <R/>
+      <Router/>
     </div>
   );
 }
