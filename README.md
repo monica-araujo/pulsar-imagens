@@ -1,10 +1,13 @@
 # 📸 Pulsar Imagens - Desafio 
 
-## Sobre
+## 📓 Sobre
 
 Desafio feito para o processo seletivo da Pulsar Imagens. Uma releitura de uma ou mais páginas do próprio site da Pulsar, para mostrar melhor como é minha organização com o código e meus principais conhecimentos. 
 
-## Tecnologias
+## 🔗 Link do surge
+http://eminent-thumb.surge.sh/
+
+## 🛠 Tecnologias
 
 As principais ferramentas utilizadas para a construção do projeto foram:
 - React.js
