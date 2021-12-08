@@ -1,9 +1,21 @@
 import { TextField } from "@material-ui/core";
 import React from "react";
+import useForm from "../../hooks/useForm";
 import { NewsletterContainer, MainText, InputContainer, SendButton, TextContainer } from "./style";
 <TextField id="outlined-basic" label="Outlined" variant="outlined" />;
 
 export const Newsletter = () => {
+
+    const {form, onChange, cleanFields} = useForm ({
+        name: "",
+        email: ""
+    })
+
+    const onSubmitForm = (event) => {
+        event.preventDefault()
+        alert('Pronto! Agora você receberá todas as noovidades da Pulsar Imagens!')
+        cleanFields()
+    }
 
     return (
         <NewsletterContainer>
@@ -12,12 +24,12 @@ export const Newsletter = () => {
                     Cadastre-se na newsletter e receba novidades
                 </MainText>
             </TextContainer>
-            <form>
+            <form onSubmit={onSubmitForm}>
                 <InputContainer>
                     <TextField
                         name={'name'}
-                        //value={form.name}
-                        //onChange={onChange}
+                        value={form.name}
+                        onChange={onChange}
                         label={'Nome'}
                         placeholder={'Nome e sobrenome'}
                         variant={'outlined'}
@@ -31,8 +43,8 @@ export const Newsletter = () => {
                     />
                     <TextField
                         name={'email'}
-                        //value={form.email}
-                        //onChange={onChange}
+                        value={form.email}
+                        onChange={onChange}
                         label={'E-mail'}
                         placeholder={'email@email.com'}
                         variant={'outlined'}
