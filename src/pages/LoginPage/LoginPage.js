@@ -4,10 +4,22 @@ import { MainContainer, InputContainer, SendButton, MainText, SignUpText} from "
 import TextField from '@mui/material/TextField';
 import { goToSignUpPage } from "../../routes/coordinator";
 import { useHistory } from 'react-router-dom'
+import useForm from "../../hooks/useForm";
 
 export const LoginPage = () => {
 
     const history = useHistory()
+
+    const {form, onChange, cleanFields} = useForm ({
+        email: "",
+        password: ""
+    })
+
+    const onSubmitForm = (event) => {
+        event.preventDefault()
+        alert('Login efetuado com sucesso!')
+        cleanFields()
+    }
 
     return (
         <div>
@@ -16,12 +28,12 @@ export const LoginPage = () => {
             <MainText>
                 Entre para continuar
             </MainText>
-            <form>
+            <form onSubmit={onSubmitForm}>
                 <InputContainer>
                     <TextField 
                         name={'email'}
-                        //value={form.email}
-                        //onChange={onChange}
+                        value={form.email}
+                        onChange={onChange}
                         label={'E-mail'}
                         placeholder={'email@email.com'}
                         variant={'outlined'}
@@ -35,8 +47,8 @@ export const LoginPage = () => {
                     />
                     <TextField 
                         name={'password'}
-                        //value={form.email}
-                        //onChange={onChange}
+                        value={form.password}
+                        onChange={onChange}
                         label={'Senha'}
                         placeholder={'Senha de pelo menos 8 dígitos'}
                         variant={'outlined'}

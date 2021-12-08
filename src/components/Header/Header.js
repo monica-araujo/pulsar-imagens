@@ -25,6 +25,10 @@ export const Header = () => {
 
     const history = useHistory()
 
+    const goToHomePage = () => {
+        history.push('/')
+    }
+
     const [show, setShow] = useState(false)
 
     const toggleMenu = () => {
@@ -34,7 +38,7 @@ export const Header = () => {
     return (
         <Headers>
             <StyledHeader>
-                <LogoContainer onClick={}>
+                <LogoContainer onClick={goToHomePage}>
                     <Title>PULSAR</Title>
                     <YellowTitle>IMAGENS</YellowTitle>
                 </LogoContainer>
