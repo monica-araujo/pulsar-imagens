@@ -1,4 +1,3 @@
-import { style } from '@material-ui/system'
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
@@ -8,6 +7,10 @@ export const FooterContainer = styled.div`
     display: grid;
 	grid-template-columns: 100px 150px 1fr 1fr  100px;
 	gap: 30px;
+    ${({ theme }) => theme.tablet`
+        display: flex;
+        flex-direction: column
+  `}
 `
 
 export const LogoContainer = styled.div`
@@ -44,6 +47,9 @@ export const MainText = styled.h3`
 export const Nav = styled.div`
     flex-direction: column;
     margin-left: 5rem;
+    ${({ theme }) => theme.tablet`
+        margin-left: 2.5rem
+  `}
 `
 
 export const Paragraph = styled.p`

@@ -1,16 +1,18 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-    flex-direction: column;
-    color: ${({theme})  => theme.primary};
+    width: 90vw;
 `
 
 export const ImgStyled = styled.img`
-    width: 600px;
-    height: 400px;
+    width: 90%;
+    height: 300px;
+    padding-left: 1.5vw;
+
+`
+
+export const Div = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

@@ -1,16 +1,18 @@
 import React from "react";
 import { Header } from "../../components/Header/Header";
-import { MainContainer, InputContainer, SendButton, MainText} from "./styled";
+import { MainContainer, InputContainer, SendButton, MainText, LoginText} from "./styled";
 import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import { goToLoginPage } from "../../routes/coordinator";
+import { useHistory } from "react-router-dom";
 
 export const SignUpPage = () => {
 
-    const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
-
+    const history = useHistory()
+    
     return (
         <div>
             <Header/>
@@ -78,6 +80,11 @@ export const SignUpPage = () => {
                             />
                         </FormGroup>
                     </FormControl>
+                    <SendButton
+                        type={'submit'}
+                    >   Cadastrar
+                    </SendButton>
+                    <LoginText onClick={() => goToLoginPage(history)}>Já possui uma conta? Entre aqui</LoginText>
                 </InputContainer>
             </MainContainer>
         </div>

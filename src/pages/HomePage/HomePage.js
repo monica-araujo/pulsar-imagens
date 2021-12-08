@@ -3,7 +3,7 @@ import { ImageSlider, slider } from '../../components/imageSlides/ImageSlider';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { Newsletter } from '../../components/Newsletter/Newsletter';
-import { MainContainer, BannerContainer, InputStyled, StyledSelect, ButtonStyled, StyledForm } from './styled';
+import { MainContainer, BannerContainer, InputStyled, StyledSelect, ButtonStyled, StyledForm, ImageSliderContainer, MainTextSlider, TextContainer } from './styled';
 
 export const HomePage = () => {
     return(
@@ -25,7 +25,12 @@ export const HomePage = () => {
                         </StyledForm>
                 </BannerContainer>
             </MainContainer>
-            <ImageSlider/>
+            <ImageSliderContainer>
+                <TextContainer>
+                    <MainTextSlider>Adicionadas recentemente</MainTextSlider>
+                </TextContainer>
+                <ImageSlider/>
+            </ImageSliderContainer>
             <Newsletter/>
             <Footer/>
         </div>

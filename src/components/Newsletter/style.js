@@ -2,18 +2,22 @@ import styled from "styled-components";
 
 export const NewsletterContainer=styled.div`
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 8rem;
   height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: rem;
+`
+export const TextContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
 `
 
 export const MainText = styled.h1`
   color: ${({theme}) => theme.primary};
-  
 `
 
 export const InputContainer = styled.div`

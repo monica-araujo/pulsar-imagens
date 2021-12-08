@@ -9,7 +9,6 @@ export const Headers = styled.header`
   z-index: 10;
 `
 export const StyledHeader = styled.div`
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -23,12 +22,10 @@ export const LogoContainer = styled.div`
 
 export const Title = styled.h2`
   color:white;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 `
 
 export const YellowTitle = styled.h4`
   color: ${({theme}) => theme.primary};
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 `
 export const MenuStyled = styled.menu`
   display: flex;
@@ -74,6 +71,11 @@ export const MenuInconStyled = styled.img`
 export const Li = styled.li`
   cursor: pointer;
   padding: 15px;
+  ${({ theme }) => theme.desktop`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  `}
 `;
 
 export const SelectStyled = styled.select`

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import banner from '../../assets/images/banner3.png'
+import banner from '../../assets/images/banner.png'
 
 export const MainContainer = styled.div`
     display: flex;
@@ -54,4 +54,23 @@ export const ButtonStyled = styled.input`
         cursor: pointer;
         background-color: ${({theme}) => theme.secundary};
     }
+`
+
+export const ImageSliderContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`
+export const TextContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+`
+
+export const MainTextSlider = styled.h1`
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+    color: ${({theme}) => theme.primary};
 `

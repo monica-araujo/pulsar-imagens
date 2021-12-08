@@ -1,15 +1,17 @@
 import { TextField } from "@material-ui/core";
 import React from "react";
-import { NewsletterContainer, MainText, InputContainer, SendButton } from "./style";
+import { NewsletterContainer, MainText, InputContainer, SendButton, TextContainer } from "./style";
 <TextField id="outlined-basic" label="Outlined" variant="outlined" />;
 
 export const Newsletter = () => {
 
     return (
         <NewsletterContainer>
-            <MainText>
-                Cadastre-se na newsletter e receba novidades
-            </MainText>
+            <TextContainer>
+                <MainText>
+                    Cadastre-se na newsletter e receba novidades
+                </MainText>
+            </TextContainer>
             <form>
                 <InputContainer>
                     <TextField

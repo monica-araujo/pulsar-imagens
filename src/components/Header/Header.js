@@ -34,7 +34,7 @@ export const Header = () => {
     return (
         <Headers>
             <StyledHeader>
-                <LogoContainer>
+                <LogoContainer onClick={}>
                     <Title>PULSAR</Title>
                     <YellowTitle>IMAGENS</YellowTitle>
                 </LogoContainer>
